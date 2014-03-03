@@ -1,0 +1,12 @@
+Revision history for Perl extension Tsk::XS.
+
+0.02  Mon Feb 24 09:56:17 2014
+        - Switched TskImgInfo, TskVsInfo to typemaps
+        - Ported part of TskStack , TskFsInfo to typemapped XS classes
+        - Added TSK constants
+        - Added tests for all classes ported to Perl
+
+0.01  Tue Oct  1 07:57:50 2013
+	- original version; created by h2xs 1.23 with options
+		-n Tsk::XS -A
+
