@@ -30,6 +30,9 @@ int
 TskImgInfo::open(char* a_image, TSK_IMG_TYPE_ENUM a_type, unsigned int a_ssize)
 
 void
+TskImgInfo::DESTROY()
+
+void
 TskImgInfo::getPointer()
     PPCODE:
         printf("THIS=%ld\n",(long int)THIS);

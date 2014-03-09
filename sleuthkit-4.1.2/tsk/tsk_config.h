@@ -53,10 +53,10 @@
 #define HAVE_LIBDL 1
 
 /* Define to 1 if you have the `ewf' library (-lewf). */
-/* #undef HAVE_LIBEWF */
+#define HAVE_LIBEWF 1
 
 /* Define to 1 if you have the <libewf.h> header file. */
-/* #undef HAVE_LIBEWF_H */
+#define HAVE_LIBEWF_H 1
 
 /* Define to 1 if you have the `z' library (-lz). */
 #define HAVE_LIBZ 1

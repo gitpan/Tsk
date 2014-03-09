@@ -1,5 +1,23 @@
 Revision history for Perl extension Tsk::XS.
 
+0.03  Sun Mar  9 09:42:53 2014
+        - Added Tsk::Fs::Iterator
+        - Added Tsk::Fs::Iterator2
+        - Added more tests
+        - Updated porting plan
+        - Updated Makefile.PL to include debugging symbols
+        - Ported more XS API
+        - added test Tsk-Fs-Iterator.t
+        - ported getFsFile into Tsk::Fs::Dir
+        - refined tests
+        - added list volumes functionality
+        - Finished configuring Makefile.PL to build libewf and AFFLIBv3.
+        - Updated .gitignore to take care of files from libewf & AFFLIBv3 build
+        - Removed blib/ from MANIFEST to fix Perl module packaging
+        - Added libewf
+        - Added AFFLIBv3
+        - Tsk built now with libewf and AFFLIBv3 support
+
 0.02  Mon Feb 24 09:56:17 2014
         - Switched TskImgInfo, TskVsInfo to typemaps
         - Ported part of TskStack , TskFsInfo to typemapped XS classes

@@ -16,7 +16,7 @@ ok(defined($vs_info),"Tsk::Vs::Info object was defined");
 
 my $c_meta    = 0;
 my $c_unalloc = 0;
-my $c_valid   = 0;
+my $c_regular   = 0;
 if($vs_info->open($img_info, 0, $TSK_VS_TYPE_DETECT) == 1) {
     ok(defined($vs_info->getPartCount()),"return value of Tsk::Vs::Info::getPartCount was defined");
     ok($vs_info->getPartCount() == 0, "There was no volume system in the disk image");
@@ -31,11 +31,11 @@ if($vs_info->open($img_info, 0, $TSK_VS_TYPE_DETECT) == 1) {
         } elsif($flags & $TSK_VS_PART_FLAG_UNALLOC) {
             $c_unalloc++;
         } else {
-            $c_valid++;
+            $c_regular++;
         };
     };
 };
 
 ok($c_meta    == 1 ,"1 meta filesystem"    );
 ok($c_unalloc == 2 ,"2 unalloc filesystems");
-ok($c_valid   == 1 ,"1 valid filesystem"   );
+ok($c_regular   == 1 ,"1 regular filesystem"   );

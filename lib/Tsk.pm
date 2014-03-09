@@ -10,15 +10,28 @@ Tsk - Perl bindings for Tsk (a library for disk image inspection).
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =head1 SYNOPSIS
 
 For now, see tests in ./t/ included with this distribution.
 
+=head1 INSTALLATION
+
+If you want to install using cpanm, make sure you allow for big timeouts
+(the dependency has to be built):
+
+    cpanm --configure-timeout 3600 --build-timeout 3600 Tsk
+
 =head1 SEE ALSO
 
 L<https://github.com/wsdookadr/Tsk-XS>
+
+=head1 BUGS
+
+L<https://rt.cpan.org/Public/Bug/Report.html?Queue=Tsk>
+
+L<https://github.com/wsdookadr/Tsk-XS/issues>
 
 =head1 AUTHOR
 
@@ -75,7 +88,7 @@ our $TSK_FS_META_FLAG_UNUSED  = 0x08;
 our $TSK_FS_META_FLAG_COMP    = 0x10;
 our $TSK_FS_META_FLAG_ORPHAN  = 0x20;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 our @EXPORT = qw{
                  $TSK_VS_TYPE_DETECT 

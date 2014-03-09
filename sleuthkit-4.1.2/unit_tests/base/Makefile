@@ -116,7 +116,7 @@ CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
 CPP = gcc -E
-CPPFLAGS =  -pthread -I/usr/local/include
+CPPFLAGS =  -pthread -I/usr/local/include -I/home/user/myprojects/Tsk-XS/AFFLIBv3/sandbox/include -I/home/user/myprojects/Tsk-XS/libewf/include
 CPPUNIT_CFLAGS = 
 CPPUNIT_CONFIG = no
 CPPUNIT_LIBS = 
@@ -147,7 +147,7 @@ JNI_CPPFLAGS =  -I/usr/lib/jvm/java-7-openjdk-amd64/include -I/usr/lib/jvm/java-
 LD = /usr/bin/ld -m elf_x86_64
 LDFLAGS = -static 
 LIBOBJS = 
-LIBS = -ldl -lz 
+LIBS = -lewf -ldl -lz 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_S = ln -s

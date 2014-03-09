@@ -3,7 +3,6 @@ abstract: 'Perl bindings for Tsk (a library for disk image inspection). '
 author:
   - 'Stefan Petrea <stefan@garage-coding.com>'
 build_requires:
-  Devel::Peek: 0
   Devel::Symdump: 2.11
   Digest::MD5: 2.53
   ExtUtils::MakeMaker: 6.48
@@ -22,4 +21,4 @@ no_index:
     - t
     - inc
 requires: {}
-version: 0.02
+version: 0.03

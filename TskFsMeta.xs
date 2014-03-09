@@ -39,3 +39,6 @@ TskFsMeta::getFlags()
  
 TSK_INUM_T
 TskFsMeta::getAddr()
+
+void
+TskFsMeta::DESTROY()

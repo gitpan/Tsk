@@ -20,7 +20,7 @@ extern "C" {
 
 MODULE = Tsk::Fs::Dir     PACKAGE = Tsk::Fs::Dir 
 
-PROTOTYPES: DISABLE
+PROTOTYPES: ENABLE
 
 TskFsDir*
 TskFsDir::new()
@@ -35,12 +35,21 @@ TskFsFile*
 TskFsDir::getFile(int a_idx)
     CODE:
 	const char *CLASS = "Tsk::Fs::File";
-        RETVAL = THIS->getFile(a_idx);
+        RETVAL = const_cast<TskFsFile *>( THIS->getFile(a_idx) );
     OUTPUT:
         RETVAL
 
 void
 TskFsDir::close()
+
+
+TskFsFile*
+TskFsDir::getFsFile()
+    CODE:
+	const char *CLASS = "Tsk::Fs::File";
+        RETVAL = const_cast<TskFsFile*>(THIS->getFsFile());
+    OUTPUT:
+        RETVAL
 
 void
 TskFsDir::DESTROY()

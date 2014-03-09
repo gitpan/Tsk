@@ -30,6 +30,7 @@ TskFsFile::getMeta()
     CODE:
         const char *CLASS="Tsk::Fs::Meta";
         RETVAL = THIS->getMeta();
+        /*SvREFCNT_dec(RETVAL);*/
     OUTPUT:
         RETVAL
 
@@ -43,3 +44,6 @@ TskFsFile::getName()
 
 void
 TskFsFile::close()
+
+void
+TskFsFile::DESTROY()

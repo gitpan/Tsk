@@ -57,13 +57,13 @@ sub procFs {
                 next;
             };
 
-            next if $str_name eq ".";
-            push @file_list, $str_name;
+            next if $str_name eq "." || $str_name eq "..";
             if(      $type == $TSK_FS_META_TYPE_DIR) {
                 if($stack->find($fs_meta->getAddr())==0) {
-                    #print "DIR  => $str_name\n";
                     $stack->push($fs_meta->getAddr());
                     my $path2 = $path."/".$str_name;
+                    #print "$path2/$str_name\n";
+                    push @file_list, "$path2/$str_name";
                     if(procFs($fs_info,$stack,$fs_meta->getAddr(),$path2)) {
                         $fs_file->close();
                         $fs_dir->close();
@@ -72,7 +72,8 @@ sub procFs {
                     $stack->pop();
                 };
             } elsif( $type == $TSK_FS_META_TYPE_REG) {
-                #print "FILE => $str_name\n";
+                push @file_list, "$path/$str_name";
+                #print "$path/$str_name\n";
             };
         };
         $fs_file->close();
@@ -87,11 +88,12 @@ $fs_info->open($img_info, 65536, $TSK_FS_TYPE_DETECT);
 my $dir_inum = $fs_info->getRootINum();
 my $stack = Tsk::Stack->new();
 
+push @file_list,"/";
 procFs($fs_info,$stack,$dir_inum,"");
 
 my @sorted_file_list = sort { $a cmp $b } @file_list;
 my $md5_file_list = md5_hex(join("||",@sorted_file_list));
-ok($md5_file_list eq "3bd7a9d33d8d1ab0ce1a054a5c8c929a", "file list MD5 looks good");
+is($md5_file_list, "4aec1a061bb37a8770907654eeb254a0", "file list MD5 looks good");
 
 #ok($dir_inum==5,"5 inodes");
 ok($inv_fs_file == 1, "Invariant I");

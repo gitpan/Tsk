@@ -42,7 +42,14 @@ ewf.lo: ewf.c tsk_img_i.h ../../tsk/base/tsk_base_i.h \
  /usr/include/bits/fcntl-linux.h /usr/include/bits/fcntl2.h \
  /usr/include/errno.h /usr/include/bits/errno.h \
  /usr/include/linux/errno.h /usr/include/asm/errno.h \
- /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ ewf.h /home/user/myprojects/Tsk-XS/libewf/include/libewf.h \
+ /home/user/myprojects/Tsk-XS/libewf/include/libewf/codepage.h \
+ /home/user/myprojects/Tsk-XS/libewf/include/libewf/types.h \
+ /home/user/myprojects/Tsk-XS/libewf/include/libewf/features.h \
+ /home/user/myprojects/Tsk-XS/libewf/include/libewf/definitions.h \
+ /home/user/myprojects/Tsk-XS/libewf/include/libewf/error.h \
+ /home/user/myprojects/Tsk-XS/libewf/include/libewf/extern.h
 
 tsk_img_i.h:
 
@@ -231,3 +238,19 @@ tsk_img.h:
 /usr/include/asm-generic/errno.h:
 
 /usr/include/asm-generic/errno-base.h:
+
+ewf.h:
+
+/home/user/myprojects/Tsk-XS/libewf/include/libewf.h:
+
+/home/user/myprojects/Tsk-XS/libewf/include/libewf/codepage.h:
+
+/home/user/myprojects/Tsk-XS/libewf/include/libewf/types.h:
+
+/home/user/myprojects/Tsk-XS/libewf/include/libewf/features.h:
+
+/home/user/myprojects/Tsk-XS/libewf/include/libewf/definitions.h:
+
+/home/user/myprojects/Tsk-XS/libewf/include/libewf/error.h:
+
+/home/user/myprojects/Tsk-XS/libewf/include/libewf/extern.h:

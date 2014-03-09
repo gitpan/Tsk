@@ -113,9 +113,16 @@ plugin.o: plugin.cpp ../../../tsk/tsk_tools_i.h \
  /usr/include/bits/fcntl-linux.h /usr/include/bits/uio.h \
  /usr/include/bits/fcntl2.h /usr/include/pwd.h /usr/include/strings.h \
  /usr/include/sys/time.h /usr/include/sys/resource.h \
- /usr/include/bits/resource.h hash_t.h sha2.h utils.h /usr/include/err.h \
- dfxml.h /usr/include/c++/4.7/fstream /usr/include/c++/4.7/bits/codecvt.h \
- /usr/include/c++/4.7/cstdio \
+ /usr/include/bits/resource.h \
+ /home/user/myprojects/Tsk-XS/libewf/include/libewf.h \
+ /home/user/myprojects/Tsk-XS/libewf/include/libewf/codepage.h \
+ /home/user/myprojects/Tsk-XS/libewf/include/libewf/types.h \
+ /home/user/myprojects/Tsk-XS/libewf/include/libewf/features.h \
+ /home/user/myprojects/Tsk-XS/libewf/include/libewf/definitions.h \
+ /home/user/myprojects/Tsk-XS/libewf/include/libewf/error.h \
+ /home/user/myprojects/Tsk-XS/libewf/include/libewf/extern.h hash_t.h \
+ sha2.h utils.h /usr/include/err.h dfxml.h /usr/include/c++/4.7/fstream \
+ /usr/include/c++/4.7/bits/codecvt.h /usr/include/c++/4.7/cstdio \
  /usr/include/x86_64-linux-gnu/c++/4.7/./bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/4.7/./bits/c++io.h \
  /usr/include/c++/4.7/bits/fstream.tcc /usr/include/c++/4.7/stack \
@@ -499,6 +506,20 @@ fiwalk.h:
 /usr/include/sys/resource.h:
 
 /usr/include/bits/resource.h:
+
+/home/user/myprojects/Tsk-XS/libewf/include/libewf.h:
+
+/home/user/myprojects/Tsk-XS/libewf/include/libewf/codepage.h:
+
+/home/user/myprojects/Tsk-XS/libewf/include/libewf/types.h:
+
+/home/user/myprojects/Tsk-XS/libewf/include/libewf/features.h:
+
+/home/user/myprojects/Tsk-XS/libewf/include/libewf/definitions.h:
+
+/home/user/myprojects/Tsk-XS/libewf/include/libewf/error.h:
+
+/home/user/myprojects/Tsk-XS/libewf/include/libewf/extern.h:
 
 hash_t.h:
 
