@@ -5,6 +5,8 @@ MANIFEST
 ppport.h
 README
 testdata/testimage001.001
+testdata/testimage001.E01
+testdata/testimage001.aff
 samples/get-metadata-files.pl
 samples/list-files-dirs.pl
 samples/reading-file-in-batches.pl

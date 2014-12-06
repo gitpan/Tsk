@@ -6,5 +6,6 @@ use Tsk;
 require Exporter;
 our @ISA = qw(Exporter);
 our @EXPORT = @Tsk::EXPORT;
+our $VERSION = '0.041';
 
 1;

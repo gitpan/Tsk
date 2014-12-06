@@ -39,6 +39,38 @@ If you want to install using cpanm, make sure you allow for big timeouts
 
     cpanm --configure-timeout 3600 --build-timeout 3600 Tsk
 
+=head2 Dependencies
+
+=head3 Ubuntu/Debian
+
+    aptitude install zlib1g-dev
+    aptitude install zlib1g
+    aptitude install libssl-dev
+    aptitude install gcc
+    aptitude install g++
+    aptitude install autoconf
+    aptitude install automake
+    aptitude install make
+    aptitude install libtool
+    aptitude install libfuse-dev
+
+=head3 Mageia
+
+    urpmi lib64fuse-devel
+    urpmi autoconf
+    urpmi automake
+    urpmi libtool
+    urpmi gcc gcc-c++
+    urpmi make
+    urpmi perl-devel
+    urpmi zlib
+    urpmi lib64zlib-devel
+    urpmi openssl-devel (or lib64openssl-devel)
+
+=head3 Gentoo
+
+TODO
+
 =head1 SAMPLES
 
 This distribution ships with code samples that illustrate sleuthkit use-cases:
@@ -62,13 +94,6 @@ Opens a disk image nad reads a file in batches.
 Recovers a deleted file from a disk image.
 
 =back
-
-=head1 INSTALLATION
-
-If you want to install using cpanm, make sure you allow for big timeouts
-(the dependency has to be built):
-
-    cpanm --configure-timeout 3600 --build-timeout 3600 Tsk
 
 =head1 SEE ALSO
 
@@ -213,7 +238,7 @@ our $TSK_FS_BLOCK_FLAG_RES     = 0x0100;
 our $TSK_FS_BLOCK_FLAG_AONLY   = 0x0200;
 
 
-our $VERSION = '0.04';
+our $VERSION = '0.041';
 
 our @EXPORT = qw{
                  $TSK_VS_TYPE_DETECT 

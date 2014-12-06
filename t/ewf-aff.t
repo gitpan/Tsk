@@ -18,7 +18,7 @@ my $t2 = "testdata/testimage001.E012";
 
 sub open_image {
     my $img_info = Tsk::Img::Info->new();
-    $img_info->open($_[0],$TSK_IMG_TYPE_DETECT,0);
+    return $img_info->open($_[0],$TSK_IMG_TYPE_DETECT,0);
 }
 
 ok(!open_image($raw_image_path),"Raw image format opened"    );

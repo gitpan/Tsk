@@ -11,6 +11,7 @@ use Tsk::Fs::Iterator;
 use Tsk::Img::Info ;
 use Tsk::Vs::Info;
 use Carp;
+our $VERSION = '0.041';
 =head1 NAME
 
 Tsk::Fs::Iterator2 - File iterator over all files/directories in all volumes of a disk image

@@ -12,6 +12,7 @@ use Tsk::Vs::Info;
 #use Tsk::Vs::PartInfo;
 use Carp;
 
+our $VERSION = '0.041';
 $Carp::Verbose = 1;
 
 =head1 NAME

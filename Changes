@@ -1,5 +1,11 @@
 Revision history for Perl extension Tsk::XS.
 
+0.041 Sat Dec  6 19:52:16 2014
+        - added missing test data files
+        - added missing versions to .pm files
+        - added more documentation around dependencies needed for
+          Debian and Mageia
+
 0.04  Sat Dec  6 10:08:25 2014
         - added sleuthkit as submodule
         - refactored Tsk::Fs::Iterator module

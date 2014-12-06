@@ -5,6 +5,7 @@ use warnings;
 use Tsk;
 require Exporter;
 
+our $VERSION = '0.041';
 our @ISA = qw(Exporter);
 our @EXPORT = @Tsk::EXPORT;
 
