@@ -3,8 +3,6 @@ use warnings;
 use Test::More qw/no_plan/;
 BEGIN { use_ok('Tsk'); };
 
-
-
 my $flag = 0;
 $flag |= $TSK_FS_META_FLAG_ALLOC;
 $flag |= $TSK_FS_META_FLAG_USED ;

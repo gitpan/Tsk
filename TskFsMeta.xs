@@ -30,7 +30,6 @@ nop(self)
 TSK_OFF_T
 TskFsMeta::getSize()
 
-
 TSK_FS_META_TYPE_ENUM
 TskFsMeta::getType()
 
@@ -39,6 +38,44 @@ TskFsMeta::getFlags()
  
 TSK_INUM_T
 TskFsMeta::getAddr()
+
+# file time attributes
+
+time_t
+TskFsMeta::getMTime()
+
+uint32_t
+TskFsMeta::getMTimeNano()
+
+time_t
+TskFsMeta::getATime()
+
+uint32_t
+TskFsMeta::getATimeNano()
+
+time_t
+TskFsMeta::getCTime()
+
+uint32_t
+TskFsMeta::getCTimeNano()
+
+time_t
+TskFsMeta::getCrTime()
+
+uint32_t
+TskFsMeta::getCrTimeNano()
+
+time_t
+TskFsMeta::getDTime()
+
+uint32_t
+TskFsMeta::getDTimeNano()
+
+time_t
+TskFsMeta::getBackUpTime()
+
+uint32_t
+TskFsMeta::getBackUpTimeNano()
 
 void
 TskFsMeta::DESTROY()

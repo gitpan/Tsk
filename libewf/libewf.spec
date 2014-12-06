@@ -36,8 +36,8 @@ Header files and libraries for developing applications for libewf.
 %package tools
 Summary: Several tools for reading and writing EWF files
 Group: Applications/System
-Requires: libewf = %{version}-%{release}  fuse-libs    
-BuildRequires: byacc flex  fuse-devel    
+Requires: libewf = %{version}-%{release}  fuse-libs    libuuid
+BuildRequires: byacc flex  fuse-devel    libuuid-devel
 
 %description tools
 Several tools for reading and writing EWF files.
@@ -112,6 +112,6 @@ rm -rf ${RPM_BUILD_ROOT}
 %exclude %{_bindir}/ewfdebug
 
 %changelog
-* Thu Feb 27 2014 Joachim Metz <joachim.metz@gmail.com> 20140227-1
+* Sat Dec  6 2014 Joachim Metz <joachim.metz@gmail.com> 20140227-1
 - Auto-generated
 

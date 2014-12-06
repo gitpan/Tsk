@@ -26,13 +26,12 @@ ok(!$found_35,"Stack does not contain 35");
 ok(!$found_36,"Stack does not contain 36");
 ok( $found_55,"Stack contains 55");
 ok($o->top()==10,"Stack contains 10 elements");
-ok($o->length()==64,"Stack has 64 allocated spots at the moment");
+ok($o->length()==64,"Stack has 64 allocated spots");
+#Adding 64 more elements to the stack (F_13 to F_77)
 for(1..64) {
     ($a,$b) = ($b,($a+$b));
     $o->push($b);
 };
-print "Adding 64 more elements to the stack\n";
 ok($o->top()==74,"Stack contains 74 elements");
-ok($o->length()==128,"Stack has 128 allocated spots at the moment");
-
+ok($o->length()==128,"Stack has 128 allocated spots");
 

@@ -1,5 +1,16 @@
 Revision history for Perl extension Tsk::XS.
 
+0.04  Sat Dec  6 10:08:25 2014
+        - added sleuthkit as submodule
+        - refactored Tsk::Fs::Iterator module
+        - ported TskFsFile::read method
+        - block-level access (through TskFsBlock)
+        - attribute-level access(through TskFsAttribute)
+        - memory leak fix in sleuthkit library
+        - added samples for using this library
+        - added more tests to the test suite
+        - added more documentation
+
 0.03  Sun Mar  9 09:42:53 2014
         - Added Tsk::Fs::Iterator
         - Added Tsk::Fs::Iterator2

@@ -19,7 +19,7 @@ my $inv_fs_dir  = 1;
 
 # TskFsFile namespace functions
 my $h_namespace = { map { ($_ => 1) } (Devel::Symdump->functions("Tsk::Fs::File")) };
-ok($h_namespace->{"Tsk::Fs::File::new"} == 1, "::new method present");
+#ok($h_namespace->{"Tsk::Fs::File::new"} == 1, "::new method present");
 ok($h_namespace->{"Tsk::Fs::File::getName"} == 1, "::getName method present");
 ok($h_namespace->{"Tsk::Fs::File::getMeta"} == 1, "::getMeta method present");
 

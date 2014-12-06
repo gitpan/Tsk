@@ -10,7 +10,6 @@ use Tsk::Fs::Info ;
 use Tsk::Fs::Iterator;
 use Tsk::Img::Info ;
 use Tsk::Vs::Info;
-#use Tsk::Vs::PartInfo;
 use Carp;
 =head1 NAME
 
@@ -25,7 +24,7 @@ This module allows for easy traversal of all volumes in a disk image.
     use Tsk::Fs::Iterator2;
     my $iter = Tsk::Fs::Iterator2->new("disk-image.dsk");
     while(my $f = $iter->next() ) {
-        print $f->{name}."\n";
+        print $f->getFileName()."\n";
     };
 
 =cut
@@ -58,8 +57,7 @@ sub next_volume {
         return undef;
     };
     my $fs_iter = Tsk::Fs::Iterator->new($self->{image_path}, $offset);
-    delete 
-    $self->{tsk_fs_iterator};
+    delete $self->{tsk_fs_iterator};
     $self->{tsk_fs_iterator} = $fs_iter;
 };
 
@@ -71,12 +69,17 @@ Returns the next Tsk::Fs::File object.
 
 sub next_node {
     my ($self) = @_;
-    my $i = $self->{tsk_fs_iterator}->next();
-    if(!$i) {
+    my $iter = $self->{tsk_fs_iterator};
+    my $i = $iter->next();
+    while(!$iter->done && !defined($i)){
+        $i = $iter->next();
+    };
+    if($iter->done) {
         if(!$self->next_volume) {
             return undef;
+        } else {
+            $i = $iter->next;
         };
-        $i = $self->{tsk_fs_iterator}->next();
     };
     return $i;
 };

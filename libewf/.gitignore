@@ -1,0 +1,9 @@
+*
+*/*
+*/*/*
+common/config.h
+dpkg/changelog
+dpkg/copyright
+libewf.spec
+macosx/libewf.pmdoc/index.xml
+!.gitignore

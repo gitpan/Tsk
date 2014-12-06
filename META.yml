@@ -1,24 +1,24 @@
 ---
-abstract: 'Perl bindings for Tsk (a library for disk image inspection). '
+abstract: 'Perl bindings for Tsk (forensic analysis library). '
 author:
   - 'Stefan Petrea <stefan@garage-coding.com>'
 build_requires:
-  Devel::Symdump: 2.11
-  Digest::MD5: 2.53
-  ExtUtils::MakeMaker: 6.48
-  ExtUtils::XSpp: 0.1602
+  Devel::Symdump: '2.11'
+  Digest::MD5: '2.53'
+  ExtUtils::MakeMaker: '6.48'
+  ExtUtils::XSpp: '0.1602'
 configure_requires:
-  ExtUtils::MakeMaker: 0
+  ExtUtils::MakeMaker: '0'
 dynamic_config: 1
-generated_by: 'ExtUtils::MakeMaker version 6.66, CPAN::Meta::Converter version 2.120921'
-license: unknown
+generated_by: 'ExtUtils::MakeMaker version 6.98, CPAN::Meta::Converter version 2.143240'
+license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  version: '1.4'
 name: Tsk
 no_index:
   directory:
     - t
     - inc
 requires: {}
-version: 0.03
+version: '0.04'

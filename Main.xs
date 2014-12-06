@@ -13,7 +13,6 @@
     PUTBACK; \
 } while(0)
 
-XS(boot_Tsk__Exp);
 XS(boot_Tsk__Img__Info);
 XS(boot_Tsk__Vs__Info);
 XS(boot_Tsk__Vs__Part__Info);
@@ -22,6 +21,8 @@ XS(boot_Tsk__Fs__File);
 XS(boot_Tsk__Fs__Dir);
 XS(boot_Tsk__Fs__Meta);
 XS(boot_Tsk__Fs__Name);
+XS(boot_Tsk__Fs__Block);
+XS(boot_Tsk__Fs__Attribute);
 XS(boot_Tsk__Stack);
 
 
@@ -36,7 +37,7 @@ stack_fix(boot_Tsk__Fs__Info(aTHX_ cv));
 stack_fix(boot_Tsk__Fs__Dir(aTHX_ cv));
 stack_fix(boot_Tsk__Fs__File(aTHX_ cv));
 stack_fix(boot_Tsk__Fs__Name(aTHX_ cv));
+stack_fix(boot_Tsk__Fs__Block(aTHX_ cv));
+stack_fix(boot_Tsk__Fs__Attribute(aTHX_ cv));
 stack_fix(boot_Tsk__Stack(aTHX_ cv));
-stack_fix(boot_Tsk__Exp(aTHX_ cv));
-
 

@@ -1,12 +1,12 @@
 {
-   "abstract" : "Perl bindings for Tsk (a library for disk image inspection). ",
+   "abstract" : "Perl bindings for Tsk (forensic analysis library). ",
    "author" : [
       "Stefan Petrea <stefan@garage-coding.com>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "ExtUtils::MakeMaker version 6.66, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "ExtUtils::MakeMaker version 6.98, CPAN::Meta::Converter version 2.143240",
    "license" : [
-      "unknown"
+      "perl_5"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
@@ -38,5 +38,5 @@
       }
    },
    "release_status" : "stable",
-   "version" : "0.03"
+   "version" : "0.04"
 }

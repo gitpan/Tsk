@@ -1,61 +1,52 @@
-
 TYPEMAP
-TskImgInfo *   O_OBJECT
-TskVsInfo  *   O_OBJECT
+TskFsDir       *   O_OBJECT
+TskFsBlock     *   O_OBJECT
+TskImgInfo     *   O_OBJECT
+TskVsInfo      *   O_OBJECT
 TskVsPartInfo  *   O_OBJECT
-TskFsInfo  *   O_OBJECT
-TskFsDir   *   O_OBJECT
-TskFsFile  *   O_OBJECT
-TskFsName  *   O_OBJECT
-TskStack   *   O_OBJECT
-TskFsMeta  *   O_OBJECT
-
-TSK_IMG_TYPE_ENUM T_IMG_TYPE_ENUM
-TSK_VS_TYPE_ENUM  T_VS_TYPE_ENUM
-TSK_FS_TYPE_ENUM  T_FS_TYPE_ENUM
-TSK_DADDR_T       T_DADDR_T
-TSK_INUM_T        T_INUM_T
-TSK_OFF_T         T_OFF_T
-TSK_FS_META_TYPE_ENUM T_META_TYPE_ENUM
-TSK_FS_META_FLAG_ENUM T_META_FLAG_ENUM
-size_t            T_SIZE_T
-TSK_FS_FILE*  T_FS_FILE
-
+TskFsInfo      *   O_OBJECT
+TskFsFile      *   O_FS_FILE
+TskFsName      *   O_OBJECT
+TskStack       *   O_OBJECT
+TskFsMeta      *   O_OBJECT
+TskFsAttribute *   O_OBJECT
+TSK_FS_BLOCK_FLAG_ENUM  T_IV
+TSK_IMG_TYPE_ENUM       T_IV
+TSK_VS_TYPE_ENUM        T_IV
+TSK_FS_TYPE_ENUM        T_IV
+TSK_DADDR_T             T_IV
+TSK_INUM_T              T_IV
+TSK_OFF_T               T_IV
+TSK_FS_META_TYPE_ENUM   T_IV
+TSK_FS_META_FLAG_ENUM   T_IV
+TSK_FS_ATTR_TYPE_ENUM   T_IV
+TSK_FS_NAME_FLAG_ENUM   T_IV
+size_t                  T_IV
+time_t                  T_IV
+uint32_t                T_IV
+uint16_t                T_IV
+uint8_t                 T_IV
 
 INPUT
-T_FS_FILE
-	$var = reinterpret_cast<TSK_FS_FILE * >(SvIV($arg));
+O_FS_FILE
+    if( sv_isobject($arg) && (SvTYPE(SvRV($arg)) == SVt_PVMG) ) {
+        $var = INT2PTR($type,SvIV((SV*)SvRV( $arg )));
+    } else{
+        warn( \"${Package}::$func_name() -- $var is not a blessed SV reference\" );
+        XSRETURN_UNDEF;
+    }
 
-T_IMG_TYPE_ENUM
-	$var = static_cast<TSK_IMG_TYPE_ENUM>(SvIV($arg));
-
-T_VS_TYPE_ENUM
-	$var = static_cast<TSK_VS_TYPE_ENUM>(SvIV($arg));
-
-T_FS_TYPE_ENUM
-	$var = static_cast<TSK_FS_TYPE_ENUM>(SvIV($arg));
-
-T_DADDR_T
-	$var = static_cast<TSK_DADDR_T>(SvUV($arg));
-
-T_OFF_T
-	$var = static_cast<TSK_OFF_T>(SvUV($arg));
-
-T_INUM_T
-	$var = static_cast<TSK_INUM_T>(SvUV($arg));
-
-T_SIZE_T
-	$var = static_cast<size_t>(SvUV($arg));
+O_OBJECT
+    if( sv_isobject($arg) && (SvTYPE(SvRV($arg)) == SVt_PVMG) ) {
+        $var = INT2PTR($type,SvIV((SV*)SvRV( $arg )));
+    } else{
+        warn( \"${Package}::$func_name() -- $var is not a blessed SV reference\" );
+        XSRETURN_UNDEF;
+    }
 
 OUTPUT
-T_OFF_T
-        $arg = newSViv(static_cast<long>($var));
+O_FS_FILE
+        sv_setref_pv( $arg, (char *)"Tsk::Fs::File", (void*)$var );
 
-T_META_TYPE_ENUM
-        $arg = newSViv(static_cast<long>($var));
-
-T_META_FLAG_ENUM
-        $arg = newSViv(static_cast<long>($var));
-
-T_INUM_T
-        $arg = newSViv(static_cast<long>($var));
+O_OBJECT
+        sv_setref_pv( $arg, (char *)CLASS, (void*)$var );

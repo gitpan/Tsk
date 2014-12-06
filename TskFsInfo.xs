@@ -34,3 +34,18 @@ TskFsInfo::close()
  
 long
 TskFsInfo::getRootINum()
+
+unsigned int 
+TskFsInfo::getBlockSize()
+
+TSK_DADDR_T 
+TskFsInfo::getFirstBlock()
+
+TSK_DADDR_T 
+TskFsInfo::getLastBlock()
+
+TSK_DADDR_T
+TskFsInfo::getLastBlockAct()
+
+TSK_DADDR_T 
+TskFsInfo::getBlockCount()

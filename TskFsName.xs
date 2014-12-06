@@ -26,6 +26,15 @@ PROTOTYPES: DISABLE
 # 
 const char*
 TskFsName::getName()
-#
-# void
-# TskFsName::DESTROY()
+
+const char*
+TskFsName::getShortName()
+
+TSK_FS_NAME_FLAG_ENUM
+TskFsName::getFlags()
+
+void
+TskFsName::DESTROY()
+
+TSK_INUM_T
+TskFsName::getMetaAddr()

@@ -158,7 +158,7 @@
 #define HAVE_GMTIME_R 1
 
 /* Define to 1 if GUID/UUID support is available. */
-/* #undef HAVE_GUID_SUPPORT */
+#define HAVE_GUID_SUPPORT 1
 
 /* Define if you have the iconv() function and it works. */
 /* #undef HAVE_ICONV */
@@ -326,7 +326,7 @@
 /* #undef HAVE_LIBUNA_H */
 
 /* Define to 1 if you have the 'libuuid' library (-luuid). */
-/* #undef HAVE_LIBUUID */
+#define HAVE_LIBUUID 1
 
 /* Define to 1 if you have the `z' library (-lz). */
 /* #undef HAVE_LIBZ */
@@ -629,13 +629,13 @@
 #define HAVE_UNISTD_H 1
 
 /* Define to 1 if uuid_generate_random funtion is available in libuuid. */
-/* #undef HAVE_UUID_GENERATE_RANDOM */
+#define HAVE_UUID_GENERATE_RANDOM 1
 
 /* Define to 1 if uuid_generate_time funtion is available in libuuid. */
-/* #undef HAVE_UUID_GENERATE_TIME */
+#define HAVE_UUID_GENERATE_TIME 1
 
 /* Define to 1 if you have the <uuid/uuid.h> header file. */
-/* #undef HAVE_UUID_UUID_H */
+#define HAVE_UUID_UUID_H 1
 
 /* Define to 1 if the version 1 API should be available. */
 /* #undef HAVE_V1_API */
@@ -775,7 +775,7 @@
 
 /* Define to 1 if `lex' declares `yytext' as a `char *' by default, not a
    `char[]'. */
-/* #undef YYTEXT_POINTER */
+#define YYTEXT_POINTER 1
 
 /* Enable large inode numbers on Mac OS X 10.5.  */
 #ifndef _DARWIN_USE_64_BIT_INODE

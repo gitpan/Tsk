@@ -38,4 +38,4 @@ if($vs_info->open($img_info, 0, $TSK_VS_TYPE_DETECT) == 1) {
 
 ok($c_meta    == 1 ,"1 meta filesystem"    );
 ok($c_unalloc == 2 ,"2 unalloc filesystems");
-ok($c_regular   == 1 ,"1 regular filesystem"   );
+ok($c_regular == 1 ,"1 regular filesystem" );
